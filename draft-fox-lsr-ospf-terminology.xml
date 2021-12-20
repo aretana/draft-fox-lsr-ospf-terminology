@@ -43,10 +43,10 @@
      <organization>IBM</organization>
      <address>
        <postal>
-         <street></street>
+         <street>3039 E Cornwallis Rd</street>
          <city>Research Triangle Park</city>
          <region>NC</region>
-         <code></code>
+         <code>27709</code>
          <country>USA</country>
        </postal>
       <email>mjfox@us.ibm.com</email>
@@ -140,7 +140,10 @@
     <section anchor="update" numbered="true" toc="default">
       <name>Update to RFC2328</name>
       <t>
-        The base OSPF specification <xref target="RFC2119"/> defines the synchronization of databases as two routers froming a "master/slave relationship".  All instances of these terms are replaced by leader/follower, respectively.
+        The base OSPF specification <xref target="RFC2328"/> defines the synchronization of databases as two routers froming a "master/slave relationship".  All instances of these terms are replaced by leader/follower, respectively.
+      </t>
+      <t>
+	The Master (MS) bit in the database description packet is renamed the Leader (L) bit. 
       </t>
       <t>
         The operation of OSPF is not modified.
