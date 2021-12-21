@@ -143,7 +143,7 @@
         The base OSPF specification <xref target="RFC2328"/> defines the synchronization of databases as two routers froming a "master/slave relationship".  All instances of these terms are replaced by leader/follower, respectively.
       </t>
       <t>
-	The Master (MS) bit in the database description packet is renamed the Leader (L) bit. 
+	The Master (MS) bit in the database description packet is renamed the Leader (L) bit.
       </t>
       <t>
         The operation of OSPF is not modified.
@@ -164,7 +164,7 @@
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
       <t>
-        This document updates the terminology used in OSPF <xref target="RFC2119"/> without any modification to the specification of the protocol.  As such, the security characteristics of OSPF do not change.
+        This document updates the terminology used in OSPF <xref target="RFC2328"/> without any modification to the specification of the protocol.  As such, the security characteristics of OSPF do not change.
       </t>
     </section>
   </middle>
