@@ -19,6 +19,7 @@
       tocDepth="4"
       symRefs="true"
       sortRefs="true"
+      consensus="true"
       version="3">
   <!-- xml2rfc v2v3 conversion 2.38.1 -->
   <!-- category values: std, bcp, info, exp, and historic
@@ -81,7 +82,7 @@
      </address>
    </author>
 
-    <date year="2021"/>
+    <date year="2022"/>
     <!-- If the month and year are both specified and are the current ones, xml2rfc will fill
         in the current day for you. If only the current year is specified, xml2rfc will fill
 	 in the current day and month for you. If the year is not the current one, it is
