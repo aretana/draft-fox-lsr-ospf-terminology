@@ -1,0 +1,154 @@
+
+
+
+
+Link State Routing                                                M. Fox
+Internet-Draft                                                       IBM
+Updates: 2328 (if approved)                                    A. Lindem
+Intended status: Standards Track                           Cisco Systems
+Expires: 14 July 2022                                          A. Retana
+                                            Futurewei Technologies, Inc.
+                                                         10 January 2022
+
+
+                       Update to OSPF Terminology
+                   draft-fox-lsr-ospf-terminology-00
+
+Abstract
+
+   This document updates some OSPF terminology to be in line with
+   inclusive language used in the industry.
+
+   This document updates RFC2328.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 14 July 2022.
+
+Copyright Notice
+
+   Copyright (c) 2022 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+     1.1.  Requirements Language
+   2.  Update to RFC2328
+   3.  Acknowledgements
+   4.  IANA Considerations
+   5.  Security Considerations
+   6.  References
+     6.1.  Normative References
+     6.2.  Informative References
+   Authors' Addresses
+
+1.  Introduction
+
+   This document updates some OSPF terminology to be in line with
+   inclusive language used in the industry.
+
+   This document updates [RFC2328].
+
+1.1.  Requirements Language
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in BCP
+   14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+2.  Update to RFC2328
+
+   The base OSPF specification [RFC2328] defines the synchronization of
+   databases as two routers froming a "master/slave relationship".  All
+   instances of these terms are replaced by leader/follower,
+   respectively.
+
+   The Master (MS) bit in the database description packet is renamed the
+   Leader (L) bit.
+
+   The operation of OSPF is not modified.
+
+3.  Acknowledgements
+
+   TDB
+
+4.  IANA Considerations
+
+   This document includes no request to IANA.
+
+5.  Security Considerations
+
+   This document updates the terminology used in OSPF [RFC2328] without
+   any modification to the specification of the protocol.  As such, the
+   security characteristics of OSPF do not change.
+
+6.  References
+
+6.1.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/info/rfc2119>.
+
+   [RFC2328]  Moy, J., "OSPF Version 2", STD 54, RFC 2328,
+              DOI 10.17487/RFC2328, April 1998,
+              <https://www.rfc-editor.org/info/rfc2328>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
+
+6.2.  Informative References
+
+Authors' Addresses
+
+   Mike Fox
+   IBM
+   3039 E Cornwallis Rd
+   Research Triangle Park, NC 27709
+   United States of America
+
+   Email: mjfox@us.ibm.com
+
+
+   Acee Lindem
+   Cisco Systems
+   301 Midenhall Way
+   Cary, NC 27513
+   United States of America
+
+   Email: acee@cisco.com
+
+
+   Alvaro Retana
+   Futurewei Technologies, Inc.
+   2330 Central Expressway
+   Santa Clara, CA 95050
+   United States of America
+
+   Email: aretana@futurewei.com
