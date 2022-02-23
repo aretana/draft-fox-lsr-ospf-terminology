@@ -12,7 +12,7 @@
       docName="draft-fox-lsr-ospf-terminology-00"
       ipr="trust200902"
       obsoletes=""
-      updates="2328"
+      updates="2328 5340"
       submissionType="IETF"
       xml:lang="en"
       tocInclude="true"
@@ -110,7 +110,7 @@
         This document updates some OSPF terminology to be in line with inclusive language used in the industry.
       </t>
       <t>
-        This document updates RFC2328.
+        This document updates RFC2328 and RFC5340.
       </t>
     </abstract>
   </front>
@@ -121,33 +121,34 @@
         This document updates some OSPF terminology to be in line with inclusive language used in the industry.
       </t>
       <t>
-        This document updates <xref target="RFC2328"/>.
+        This document updates <xref target="RFC2328"/> and <xref target="RFC5340"/>.
       </t>
 
-      <section numbered="true" toc="default">
-        <name>Requirements Language</name>
-        <t>
-          The key words "MUST", "MUST NOT", "REQUIRED", "SHALL",
-          "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT
-          RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-          interpreted as described in BCP 14 <xref target="RFC2119"/>
-          <xref target="RFC8174"/> when, and only when, they appear in
-          all capitals, as shown here.
-        </t>
-
-      </section>
     </section>
 
     <section anchor="update" numbered="true" toc="default">
       <name>Update to RFC2328</name>
       <t>
-        The base OSPF specification <xref target="RFC2328"/> defines the synchronization of databases as two routers froming a "master/slave relationship".  All instances of these terms are replaced by leader/follower, respectively.
+        The base OSPFv2 specification <xref target="RFC2328"/> defines the synchronization of databases as two routers froming a "master/slave relationship".  All instances of these terms are replaced by leader/follower, respectively.
       </t>
       <t>
 	The Master (MS) bit in the database description packet is renamed the Leader (L) bit.
       </t>
       <t>
-        The operation of OSPF is not modified.
+        The operation of OSPFv2 is not modified.
+      </t>
+    </section>
+
+    <section anchor="updatev6" numbered="true" toc="default">
+      <name>Update to RFC5340</name>
+      <t>
+        The base OSPFv3 specification <xref target="RFC5340"/> defines the database description process between two routers as one being "designated to be the master and the other is the slave".  All instances of these terms are replaced by leader/follower, respectively.
+      </t>
+      <t>
+	The Master/Slave (MS) bit in the database description packet is renamed the Leader (L) bit.
+      </t>
+      <t>
+        The operation of OSPFv3 is not modified.
       </t>
     </section>
 
@@ -159,13 +160,13 @@
 
    <section anchor="IANA" numbered="true" toc="default">
       <name>IANA Considerations</name>
-      <t>This document includes no request to IANA.</t>
+      <t>IANA is requested to rename bit 0x01 in the "Database Description (DD) Packet Flags" registry to "Leader (L-bit)" and to add a reference to this document.</t>
     </section>
 
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
       <t>
-        This document updates the terminology used in OSPF <xref target="RFC2328"/> without any modification to the specification of the protocol.  As such, the security characteristics of OSPF do not change.
+        This document updates the terminology used in OSPFv2 <xref target="RFC2328"/> and OSPFv3 <xref target="RFC5340"/> without any modification to the specification of the protocol.  As such, the security characteristics of OSPF do not change.
       </t>
     </section>
   </middle>
@@ -190,15 +191,10 @@
       <references>
         <name>Normative References</name>
         <!--?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml"?-->
-        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.2119.xml"/>
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.2328.xml"/>
-        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.8174.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5340.xml"/>
       </references>
 
-      <references>
-        <name>Informative References</name>
-        <!-- Here we use entities that we defined at the beginning. -->
-      </references>
     </references>
 
     <!-- Change Log
