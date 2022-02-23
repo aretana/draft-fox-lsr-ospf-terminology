@@ -4,11 +4,11 @@
 
 Link State Routing                                                M. Fox
 Internet-Draft                                                       IBM
-Updates: 2328 (if approved)                                    A. Lindem
+Updates: 2328 5340 (if approved)                               A. Lindem
 Intended status: Standards Track                           Cisco Systems
-Expires: 14 July 2022                                          A. Retana
+Expires: 27 August 2022                                        A. Retana
                                             Futurewei Technologies, Inc.
-                                                         10 January 2022
+                                                        23 February 2022
 
 
                        Update to OSPF Terminology
@@ -19,7 +19,7 @@ Abstract
    This document updates some OSPF terminology to be in line with
    inclusive language used in the industry.
 
-   This document updates RFC2328.
+   This document updates RFC2328 and RFC5340.
 
 Status of This Memo
 
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 July 2022.
+   This Internet-Draft will expire on 27 August 2022.
 
 Copyright Notice
 
@@ -55,14 +55,13 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-     1.1.  Requirements Language
    2.  Update to RFC2328
-   3.  Acknowledgements
-   4.  IANA Considerations
-   5.  Security Considerations
-   6.  References
-     6.1.  Normative References
-     6.2.  Informative References
+   3.  Update to RFC5340
+   4.  Acknowledgements
+   5.  IANA Considerations
+   6.  Security Considerations
+   7.  References
+     7.1.  Normative References
    Authors' Addresses
 
 1.  Introduction
@@ -70,60 +69,60 @@ Table of Contents
    This document updates some OSPF terminology to be in line with
    inclusive language used in the industry.
 
-   This document updates [RFC2328].
-
-1.1.  Requirements Language
-
-   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-   "OPTIONAL" in this document are to be interpreted as described in BCP
-   14 [RFC2119] [RFC8174] when, and only when, they appear in all
-   capitals, as shown here.
+   This document updates [RFC2328] and [RFC5340].
 
 2.  Update to RFC2328
 
-   The base OSPF specification [RFC2328] defines the synchronization of
-   databases as two routers froming a "master/slave relationship".  All
-   instances of these terms are replaced by leader/follower,
+   The base OSPFv2 specification [RFC2328] defines the synchronization
+   of databases as two routers froming a "master/slave relationship".
+   All instances of these terms are replaced by leader/follower,
    respectively.
 
    The Master (MS) bit in the database description packet is renamed the
    Leader (L) bit.
 
-   The operation of OSPF is not modified.
+   The operation of OSPFv2 is not modified.
 
-3.  Acknowledgements
+3.  Update to RFC5340
+
+   The base OSPFv3 specification [RFC5340] defines the database
+   description process between two routers as one being "designated to
+   be the master and the other is the slave".  All instances of these
+   terms are replaced by leader/follower, respectively.
+
+   The Master/Slave (MS) bit in the database description packet is
+   renamed the Leader (L) bit.
+
+   The operation of OSPFv3 is not modified.
+
+4.  Acknowledgements
 
    TDB
 
-4.  IANA Considerations
+5.  IANA Considerations
 
-   This document includes no request to IANA.
+   IANA is requested to rename bit 0x01 in the "Database Description
+   (DD) Packet Flags" registry to "Leader (L-bit)" and to add a
+   reference to this document.
 
-5.  Security Considerations
+6.  Security Considerations
 
-   This document updates the terminology used in OSPF [RFC2328] without
-   any modification to the specification of the protocol.  As such, the
-   security characteristics of OSPF do not change.
+   This document updates the terminology used in OSPFv2 [RFC2328] and
+   OSPFv3 [RFC5340] without any modification to the specification of the
+   protocol.  As such, the security characteristics of OSPF do not
+   change.
 
-6.  References
+7.  References
 
-6.1.  Normative References
-
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997,
-              <https://www.rfc-editor.org/info/rfc2119>.
+7.1.  Normative References
 
    [RFC2328]  Moy, J., "OSPF Version 2", STD 54, RFC 2328,
               DOI 10.17487/RFC2328, April 1998,
               <https://www.rfc-editor.org/info/rfc2328>.
 
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
-6.2.  Informative References
+   [RFC5340]  Coltun, R., Ferguson, D., Moy, J., and A. Lindem, "OSPF
+              for IPv6", RFC 5340, DOI 10.17487/RFC5340, July 2008,
+              <https://www.rfc-editor.org/info/rfc5340>.
 
 Authors' Addresses
 
@@ -132,7 +131,6 @@ Authors' Addresses
    3039 E Cornwallis Rd
    Research Triangle Park, NC 27709
    United States of America
-
    Email: mjfox@us.ibm.com
 
 
@@ -141,7 +139,6 @@ Authors' Addresses
    301 Midenhall Way
    Cary, NC 27513
    United States of America
-
    Email: acee@cisco.com
 
 
@@ -150,5 +147,4 @@ Authors' Addresses
    2330 Central Expressway
    Santa Clara, CA 95050
    United States of America
-
    Email: aretana@futurewei.com
