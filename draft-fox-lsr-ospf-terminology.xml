@@ -9,7 +9,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-fox-lsr-ospf-terminology-00"
+      docName="draft-fox-lsr-ospf-terminology-01"
       ipr="trust200902"
       obsoletes=""
       updates="2328 5340"
@@ -135,9 +135,12 @@
 	The Master (MS) bit in the database description packet is renamed the Leader (L) bit.
       </t>
       <t>
-        The operation of OSPFv2 is not modified.
+        The operation of OSPFv2 is not modified. The Leader/Follower terminology and Leader (L) Bit definition
+        changes impact the following sections:  7.2 "The Synchronization of Databases", 10 "The Neighbor Data Structures",
+        10.1 "Neighbor states", 10.2 "Events causing neighbor state changes", 10.6 "Receiving Database Description Packets",
+        10.8 "Sending Database Description Packets", 10.10 "An Example", and A.3.3 "The Database Description packet".
       </t>
-    </section>
+      </section>
 
     <section anchor="updatev6" numbered="true" toc="default">
       <name>Update to RFC5340</name>
@@ -148,10 +151,35 @@
 	The Master/Slave (MS) bit in the database description packet is renamed the Leader (L) bit.
       </t>
       <t>
-        The operation of OSPFv3 is not modified.
+        The operation of OSPFv3 is not modified. The Leader/Follower terminology and Leader (L) Bit definition
+        changes impact section A.3.3 "The Database Description packet".
       </t>
     </section>
 
+    <section anchor="updates-info" numbered="true" toc="default">
+      <name>Other RFCs With References</name>
+      <t>
+        The following OSPF RFCs also have references to the legacy terminology.
+      </t>
+        <ul>
+          <li>RFC 4222 - Prioritized Treatment of Specific OSPF Version 2 Packets and Congestion Avoidance (BCP)
+              <xref target="RFC4222"/></li>
+          <li>RFC 5243 - OSPF Database Exchange Summary List Optimization (Informational)
+              <xref target="RFC5243"/></li>
+          <li>RFC 4811 - OSPF Out-of-Band Link State Database (LSDB) Resynchronization (Experimental)
+              <xref target="RFC4811"/></li>
+          <li>RFC 5243 - OSPF Database Exchange Summary List Optimization (Informational)
+              <xref target="RFC5243"/></li>
+          <li>RFC 5614 - Mobile Ad Hoc Network (MANET) Extension of OSPF
+          Using Connected Dominating Set (CDS) Flooding (Experimental)
+              <xref target="RFC5614"/></li>
+          <li>RFC 5838 - Support of Address Families in OSPFv3 (Standards Track)
+              <xref target="RFC5838"/></li>
+        </ul>      
+      <t>
+        Some of these will be updated by this document. The final set is TBD.
+      </t>
+    </section>
     <section anchor="Acknowledgements" numbered="true" toc="default">
       <name>Acknowledgements</name>
       <t>TDB</t>
@@ -193,6 +221,14 @@
         <!--?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml"?-->
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.2328.xml"/>
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5340.xml"/>
+      </references>
+      <references>
+        <name>Informative References</name>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.4222.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.4811.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5243.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5614.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5838.xml"/>
       </references>
 
     </references>
