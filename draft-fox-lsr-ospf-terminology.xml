@@ -9,10 +9,10 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-fox-lsr-ospf-terminology-01"
+      docName="draft-fox-lsr-ospf-terminology-02"
       ipr="trust200902"
       obsoletes=""
-      updates="2328 5340"
+      updates="2328 5340 4222 4811 5243 5614 5838"
       submissionType="IETF"
       xml:lang="en"
       tocInclude="true"
@@ -145,7 +145,9 @@
     <section anchor="updatev6" numbered="true" toc="default">
       <name>Update to RFC5340</name>
       <t>
-        The base OSPFv3 specification <xref target="RFC5340"/> defines the database description process between two routers as one being "designated to be the master and the other is the slave".  All instances of these terms are replaced by leader/follower, respectively.
+        The base OSPFv3 specification <xref target="RFC5340"/> defines the database description process
+        between two routers as one being "designated to be the master and the other is the slave".  All instances of these
+        terms are replaced by leader/follower, respectively.
       </t>
       <t>
 	The Master/Slave (MS) bit in the database description packet is renamed the Leader (L) bit.
@@ -156,28 +158,62 @@
       </t>
     </section>
 
-    <section anchor="updates-info" numbered="true" toc="default">
-      <name>Other RFCs With References</name>
+    <section anchor="update4222" numbered="true" toc="default">
+      <name>Update to RFC4222</name>
       <t>
-        The following OSPF RFCs also have references to the legacy terminology.
-      </t>
-        <ul>
-          <li>RFC 4222 - Prioritized Treatment of Specific OSPF Version 2 Packets and Congestion Avoidance (BCP)
-              <xref target="RFC4222"/></li>
-          <li>RFC 4811 - OSPF Out-of-Band Link State Database (LSDB) Resynchronization (Experimental)
-              <xref target="RFC4811"/></li>
-          <li>RFC 5243 - OSPF Database Exchange Summary List Optimization (Informational)
-              <xref target="RFC5243"/></li>
-          <li>RFC 5614 - Mobile Ad Hoc Network (MANET) Extension of OSPF
-          Using Connected Dominating Set (CDS) Flooding (Experimental)
-              <xref target="RFC5614"/></li>
-          <li>RFC 5838 - Support of Address Families in OSPFv3 (Standards Track)
-              <xref target="RFC5838"/></li>
-        </ul>      
-      <t>
-        Some of these will be updated by this document. The final set is TBD.
+        This Best Current Practice (BCP) document describes "Prioritized Treatment of Specific OSPF Version 2 Packets and
+        Congestion Avoidance" <xref target="RFC4222"/>. There is an example OSFPv2 packet sequence in Appendix C, (2),
+        that refers to the "slave" in a database exchange. This reference will be renamed to "follower". 
       </t>
     </section>
+
+    <section anchor="update4811" numbered="true" toc="default">
+      <name>Update to RFC4811</name>
+      <t>
+        This Experimental document specifies "OSPF Out-of-Band Link State Database (LSDB) Resynchronization"
+        <xref target="RFC4811"/>.
+        Section 2.4 includes a Database Description packet figure and a description of the attendant encoding
+        changes for Out-of-Band Resynchronization. In the figure and the description, all instances of MS when
+        referring the Database Description packet bit are renamed to "L". There is also a reference to "Master" in
+        this section that is renamed to "Leader". 
+      </t>
+    </section>
+
+    <section anchor="update5243" numbered="true" toc="default">
+      <name>Update to RFC5243</name>
+      <t>
+        This Informational document describes an "OSPF Database Exchange Summary List Optimization" <xref target="RFC5243"/>.
+        The Introduction, Section 1, references "Master or Slave". This will be replaced by "Leader or Follower".
+        Section 3.0 includes an example of the optimized database exchange. In this example, all instances of
+        "Master" will be renamed to "Leader" and all instances of "Slave" will be rename to "Follower".
+      </t>
+    </section>
+    
+    <section anchor="update5614" numbered="true" toc="default">
+      <name>Update to RFC5614</name>
+      <t>
+        This Experimental document specifies the "Mobile Ad Hoc Network (MANET) Extension of OSPF
+        Using Connected Dominating Set (CDS) Flooding" <xref target="RFC5614"/>. 
+        "Changes to the Neighbor State Machine", Section 7.2 contains modifications to the neighbor
+        state machine updated from <xref target="RFC2328"/>. In this transition to "2-way" state, all
+        instances of "Master" are renamed to "Leader" and all instances of "Slave" are renamed to
+        "Follower". Addiitionally, instances of "MS" in reference to the Database Description packet
+        bit are renamed to "L". Additionally, in "Receiving Database Description Packets, Section 7.5,
+        the parenthentical "master or slave" is replaced by "leader or follower". 
+      </t>
+    </section>
+    
+    <section anchor="update5838" numbered="true" toc="default">
+      <name>Update to RFC5838</name>
+      <t>
+        This Standards Track document specifies the "Support of Address Families in OSPFv3"
+        <xref target="RFC5838"/>. "Database Description Maximum Transmission Unit (MTU)
+        Specification for Non-IPv6 AFs", Section 2.7 contains a Database Description
+        packet change figure which include the "MS" bit. In this figure, the "MS" field will
+        be renamed to "L" field. 
+      </t>
+    </section>
+    
     <section anchor="Acknowledgements" numbered="true" toc="default">
       <name>Acknowledgements</name>
       <t>TDB</t>
@@ -186,13 +222,15 @@
 
    <section anchor="IANA" numbered="true" toc="default">
       <name>IANA Considerations</name>
-      <t>IANA is requested to rename bit 0x01 in the "Database Description (DD) Packet Flags" registry to "Leader (L-bit)" and to add a reference to this document.</t>
+      <t>IANA is requested to rename bit 0x01 in the "Database Description (DD) Packet Flags"
+      registry to "Leader (L-bit)" and to add a reference to this document.</t>
     </section>
 
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
       <t>
-        This document updates the terminology used in OSPFv2 <xref target="RFC2328"/> and OSPFv3 <xref target="RFC5340"/> without any modification to the specification of the protocol.  As such, the security characteristics of OSPF do not change.
+        This document updates the terminology used in OSPF RFCs without any modification to the specifications of the protocol.
+        As such, the security characteristics of OSPF do not change.
       </t>
     </section>
   </middle>
@@ -219,9 +257,6 @@
         <!--?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml"?-->
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.2328.xml"/>
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5340.xml"/>
-      </references>
-      <references>
-        <name>Informative References</name>
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.4222.xml"/>
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.4811.xml"/>
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5243.xml"/>
