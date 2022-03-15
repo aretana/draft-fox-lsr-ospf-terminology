@@ -4,15 +4,15 @@
 
 Link State Routing                                                M. Fox
 Internet-Draft                                                       IBM
-Updates: 2328 5340 (if approved)                               A. Lindem
-Intended status: Standards Track                           Cisco Systems
-Expires: 4 September 2022                                      A. Retana
-                                            Futurewei Technologies, Inc.
-                                                            3 March 2022
+Updates: 2328 5340 4222 4811 5243 5614 5838 (if                A. Lindem
+         approved)                                         Cisco Systems
+Intended status: Standards Track                               A. Retana
+Expires: 16 September 2022                  Futurewei Technologies, Inc.
+                                                           15 March 2022
 
 
                        Update to OSPF Terminology
-                   draft-fox-lsr-ospf-terminology-01
+                   draft-fox-lsr-ospf-terminology-02
 
 Abstract
 
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 September 2022.
+   This Internet-Draft will expire on 16 September 2022.
 
 Copyright Notice
 
@@ -57,13 +57,16 @@ Table of Contents
    1.  Introduction
    2.  Update to RFC2328
    3.  Update to RFC5340
-   4.  Other RFCs With References
-   5.  Acknowledgements
-   6.  IANA Considerations
-   7.  Security Considerations
-   8.  References
-     8.1.  Normative References
-     8.2.  Informative References
+   4.  Update to RFC4222
+   5.  Update to RFC4811
+   6.  Update to RFC5243
+   7.  Update to RFC5614
+   8.  Update to RFC5838
+   9.  Acknowledgements
+   10. IANA Considerations
+   11. Security Considerations
+   12. References
+     12.1.  Normative References
    Authors' Addresses
 
 1.  Introduction
@@ -105,59 +108,80 @@ Table of Contents
    terminology and Leader (L) Bit definition changes impact section
    A.3.3 "The Database Description packet".
 
-4.  Other RFCs With References
+4.  Update to RFC4222
 
-   The following OSPF RFCs also have references to the legacy
-   terminology.
+   This Best Current Practice (BCP) document describes "Prioritized
+   Treatment of Specific OSPF Version 2 Packets and Congestion
+   Avoidance" [RFC4222].  There is an example OSFPv2 packet sequence in
+   Appendix C, (2), that refers to the "slave" in a database exchange.
+   This reference will be renamed to "follower".
 
-   *  RFC 4222 - Prioritized Treatment of Specific OSPF Version 2
-      Packets and Congestion Avoidance (BCP) [RFC4222]
+5.  Update to RFC4811
 
-   *  RFC 4811 - OSPF Out-of-Band Link State Database (LSDB)
-      Resynchronization (Experimental) [RFC4811]
+   This Experimental document specifies "OSPF Out-of-Band Link State
+   Database (LSDB) Resynchronization" [RFC4811].  Section 2.4 includes a
+   Database Description packet figure and a description of the attendant
+   encoding changes for Out-of-Band Resynchronization.  In the figure
+   and the description, all instances of MS when referring the Database
+   Description packet bit are renamed to "L".  There is also a reference
+   to "Master" in this section that is renamed to "Leader".
 
-   *  RFC 5243 - OSPF Database Exchange Summary List Optimization
-      (Informational) [RFC5243]
+6.  Update to RFC5243
 
-   *  RFC 5614 - Mobile Ad Hoc Network (MANET) Extension of OSPF Using
-      Connected Dominating Set (CDS) Flooding (Experimental) [RFC5614]
+   This Informational document describes an "OSPF Database Exchange
+   Summary List Optimization" [RFC5243].  The Introduction, Section 1,
+   references "Master or Slave".  This will be replaced by "Leader or
+   Follower".  Section 3.0 includes an example of the optimized database
+   exchange.  In this example, all instances of "Master" will be renamed
+   to "Leader" and all instances of "Slave" will be rename to
+   "Follower".
 
-   *  RFC 5838 - Support of Address Families in OSPFv3 (Standards Track)
-      [RFC5838]
+7.  Update to RFC5614
 
-   Some of these will be updated by this document.  The final set is
-   TBD.
+   This Experimental document specifies the "Mobile Ad Hoc Network
+   (MANET) Extension of OSPF Using Connected Dominating Set (CDS)
+   Flooding" [RFC5614].  "Changes to the Neighbor State Machine",
+   Section 7.2 contains modifications to the neighbor state machine
+   updated from [RFC2328].  In this transition to "2-way" state, all
+   instances of "Master" are renamed to "Leader" and all instances of
+   "Slave" are renamed to "Follower".  Addiitionally, instances of "MS"
+   in reference to the Database Description packet bit are renamed to
+   "L".  Additionally, in "Receiving Database Description Packets,
+   Section 7.5, the parenthentical "master or slave" is replaced by
+   "leader or follower".
 
-5.  Acknowledgements
+8.  Update to RFC5838
+
+   This Standards Track document specifies the "Support of Address
+   Families in OSPFv3" [RFC5838].  "Database Description Maximum
+   Transmission Unit (MTU) Specification for Non-IPv6 AFs", Section 2.7
+   contains a Database Description packet change figure which include
+   the "MS" bit.  In this figure, the "MS" field will be renamed to "L"
+   field.
+
+9.  Acknowledgements
 
    TDB
 
-6.  IANA Considerations
+10.  IANA Considerations
 
    IANA is requested to rename bit 0x01 in the "Database Description
    (DD) Packet Flags" registry to "Leader (L-bit)" and to add a
    reference to this document.
 
-7.  Security Considerations
+11.  Security Considerations
 
-   This document updates the terminology used in OSPFv2 [RFC2328] and
-   OSPFv3 [RFC5340] without any modification to the specification of the
-   protocol.  As such, the security characteristics of OSPF do not
-   change.
+   This document updates the terminology used in OSPF RFCs without any
+   modification to the specifications of the protocol.  As such, the
+   security characteristics of OSPF do not change.
 
-8.  References
+12.  References
 
-8.1.  Normative References
+12.1.  Normative References
 
    [RFC2328]  Moy, J., "OSPF Version 2", STD 54, RFC 2328,
               DOI 10.17487/RFC2328, April 1998,
               <https://www.rfc-editor.org/info/rfc2328>.
-
-   [RFC5340]  Coltun, R., Ferguson, D., Moy, J., and A. Lindem, "OSPF
-              for IPv6", RFC 5340, DOI 10.17487/RFC5340, July 2008,
-              <https://www.rfc-editor.org/info/rfc5340>.
-
-8.2.  Informative References
 
    [RFC4222]  Choudhury, G., Ed., "Prioritized Treatment of Specific
               OSPF Version 2 Packets and Congestion Avoidance", BCP 112,
@@ -172,6 +196,10 @@ Table of Contents
    [RFC5243]  Ogier, R., "OSPF Database Exchange Summary List
               Optimization", RFC 5243, DOI 10.17487/RFC5243, May 2008,
               <https://www.rfc-editor.org/info/rfc5243>.
+
+   [RFC5340]  Coltun, R., Ferguson, D., Moy, J., and A. Lindem, "OSPF
+              for IPv6", RFC 5340, DOI 10.17487/RFC5340, July 2008,
+              <https://www.rfc-editor.org/info/rfc5340>.
 
    [RFC5614]  Ogier, R. and P. Spagnolo, "Mobile Ad Hoc Network (MANET)
               Extension of OSPF Using Connected Dominating Set (CDS)
