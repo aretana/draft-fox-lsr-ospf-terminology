@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- This template is for creating an Internet Draft using xml2rfc,
+    which is available here: http://xml.resource.org. -->
+<!-- For a complete list and description of processing instructions (PIs),
+    please see http://xml.resource.org/authoring/README.html. -->
+<rfc
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      category="std"
+      docName="draft-ietf-lsr-ospf-terminology-00"
+      ipr="trust200902"
+      obsoletes=""
+      updates="2328 5340 4222 4811 5243 5614 5838"
+      submissionType="IETF"
+      xml:lang="en"
+      tocInclude="true"
+      tocDepth="4"
+      symRefs="true"
+      sortRefs="true"
+      consensus="true"
+      version="3">
+  <!-- xml2rfc v2v3 conversion 2.38.1 -->
+  <!-- category values: std, bcp, info, exp, and historic
+    ipr values: trust200902, noModificationTrust200902, noDerivativesTrust200902,
+       or pre5378Trust200902
+    you can add the attributes updates="NNNN" and obsoletes="NNNN"
+    they will automatically be output with "(if approved)" -->
+
+ <!-- ***** FRONT MATTER ***** -->
+
+ <front>
+    <!-- The abbreviated title is used in the page header - it is only necessary if the
+        full title is longer than 39 characters -->
+
+   <title abbrev="OSPF Terminology">Update to OSPF Terminology</title>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-00"/>
+    <!-- add 'role="editor"' below for the editors if appropriate -->
+
+   <!-- Another author who claims to be an editor -->
+
+   <author initials="M" surname="Fox" fullname="Mike Fox">
+     <organization>IBM</organization>
+     <address>
+       <postal>
+         <street>3039 E Cornwallis Rd</street>
+         <city>Research Triangle Park</city>
+         <region>NC</region>
+         <code>27709</code>
+         <country>USA</country>
+       </postal>
+      <email>mjfox@us.ibm.com</email>
+     </address>
+   </author>
+
+   <author initials="A" surname="Lindem" fullname="Acee Lindem">
+     <organization>Cisco Systems</organization>
+     <address>
+       <postal>
+         <street>301 Midenhall Way</street>
+         <city>Cary</city>
+         <region>NC</region>
+         <code>27513</code>
+         <country>USA</country>
+       </postal>
+      <email>acee@cisco.com</email>
+     </address>
+   </author>
+
+   <author initials="A" surname="Retana" fullname="Alvaro Retana">
+     <organization>Futurewei Technologies, Inc.</organization>
+     <address>
+       <postal>
+         <street>2330 Central Expressway</street>
+         <city>Santa Clara</city>
+         <region>CA</region>
+         <code>95050</code>
+         <country>USA</country>
+       </postal>
+      <email>aretana@futurewei.com</email>
+     </address>
+   </author>
+
+    <date year="2022"/>
+    <!-- If the month and year are both specified and are the current ones, xml2rfc will fill
+        in the current day for you. If only the current year is specified, xml2rfc will fill
+	 in the current day and month for you. If the year is not the current one, it is
+	 necessary to specify at least a month (xml2rfc assumes day="1" if not specified for the
+	 purpose of calculating the expiry date).  With drafts it is normally sufficient to
+	 specify just the year. -->
+
+   <!-- Meta-data Declarations -->
+
+   <area>Routing</area>
+    <workgroup>Link State Routing</workgroup>
+    <!-- WG name at the upperleft corner of the doc,
+        IETF is fine for individual submissions.
+	 If this element is not present, the default is "Network Working Group",
+        which is used by the RFC Editor as a nod to the history of the IETF. -->
+
+   <keyword>OSPF terminology</keyword>
+    <!-- Keywords will be incorporated into HTML output
+        files in a meta tag but they have no effect on text or nroff
+        output. If you submit your draft to the RFC Editor, the
+        keywords will be used for the search engine. -->
+
+   <abstract>
+      <t>
+        This document updates some OSPF terminology to be in line with inclusive language used in the industry.
+      </t>
+      <t>
+        This document updates RFC2328 and RFC5340.
+      </t>
+    </abstract>
+  </front>
+  <middle>
+    <section numbered="true" toc="default">
+      <name>Introduction</name>
+      <t>
+        This document updates some OSPF terminology to be in line with inclusive language used in the industry.
+      </t>
+      <t>
+        This document updates <xref target="RFC2328"/> and <xref target="RFC5340"/>.
+      </t>
+
+    </section>
+
+    <section anchor="update" numbered="true" toc="default">
+      <name>Update to RFC2328</name>
+      <t>
+        The base OSPFv2 specification <xref target="RFC2328"/> defines the synchronization of databases as two routers froming a "master/slave relationship".  All instances of these terms are replaced by leader/follower, respectively.
+      </t>
+      <t>
+	The Master (MS) bit in the database description packet is renamed the Leader (L) bit.
+      </t>
+      <t>
+        The operation of OSPFv2 is not modified. The Leader/Follower terminology and Leader (L) Bit definition
+        changes impact the following sections:  7.2 "The Synchronization of Databases", 10 "The Neighbor Data Structures",
+        10.1 "Neighbor states", 10.2 "Events causing neighbor state changes", 10.6 "Receiving Database Description Packets",
+        10.8 "Sending Database Description Packets", 10.10 "An Example", and A.3.3 "The Database Description packet".
+      </t>
+      </section>
+
+    <section anchor="updatev6" numbered="true" toc="default">
+      <name>Update to RFC5340</name>
+      <t>
+        The base OSPFv3 specification <xref target="RFC5340"/> defines the database description process
+        between two routers as one being "designated to be the master and the other is the slave".  All instances of these
+        terms are replaced by leader/follower, respectively.
+      </t>
+      <t>
+	The Master/Slave (MS) bit in the database description packet is renamed the Leader (L) bit.
+      </t>
+      <t>
+        The operation of OSPFv3 is not modified. The Leader/Follower terminology and Leader (L) Bit definition
+        changes impact section A.3.3 "The Database Description packet".
+      </t>
+    </section>
+
+    <section anchor="update4222" numbered="true" toc="default">
+      <name>Update to RFC4222</name>
+      <t>
+        This Best Current Practice (BCP) document describes "Prioritized Treatment of Specific OSPF Version 2 Packets and
+        Congestion Avoidance" <xref target="RFC4222"/>. There is an example OSFPv2 packet sequence in Appendix C, (2),
+        that refers to the "slave" in a database exchange. This reference will be renamed to "follower". 
+      </t>
+    </section>
+
+    <section anchor="update4811" numbered="true" toc="default">
+      <name>Update to RFC4811</name>
+      <t>
+        This Experimental document specifies "OSPF Out-of-Band Link State Database (LSDB) Resynchronization"
+        <xref target="RFC4811"/>.
+        Section 2.4 includes a Database Description packet figure and a description of the attendant encoding
+        changes for Out-of-Band Resynchronization. In the figure and the description, all instances of MS when
+        referring the Database Description packet bit are renamed to "L". There is also a reference to "Master" in
+        this section that is renamed to "Leader". 
+      </t>
+    </section>
+
+    <section anchor="update5243" numbered="true" toc="default">
+      <name>Update to RFC5243</name>
+      <t>
+        This Informational document describes an "OSPF Database Exchange Summary List Optimization" <xref target="RFC5243"/>.
+        The Introduction, Section 1, references "Master or Slave". This will be replaced by "Leader or Follower".
+        Section 3.0 includes an example of the optimized database exchange. In this example, all instances of
+        "Master" will be renamed to "Leader" and all instances of "Slave" will be rename to "Follower".
+      </t>
+    </section>
+    
+    <section anchor="update5614" numbered="true" toc="default">
+      <name>Update to RFC5614</name>
+      <t>
+        This Experimental document specifies the "Mobile Ad Hoc Network (MANET) Extension of OSPF
+        Using Connected Dominating Set (CDS) Flooding" <xref target="RFC5614"/>. 
+        "Changes to the Neighbor State Machine", Section 7.2 contains modifications to the neighbor
+        state machine updated from <xref target="RFC2328"/>. In this transition to "2-way" state, all
+        instances of "Master" are renamed to "Leader" and all instances of "Slave" are renamed to
+        "Follower". Addiitionally, instances of "MS" in reference to the Database Description packet
+        bit are renamed to "L". Additionally, in "Receiving Database Description Packets, Section 7.5,
+        the parenthentical "master or slave" is replaced by "leader or follower". 
+      </t>
+    </section>
+    
+    <section anchor="update5838" numbered="true" toc="default">
+      <name>Update to RFC5838</name>
+      <t>
+        This Standards Track document specifies the "Support of Address Families in OSPFv3"
+        <xref target="RFC5838"/>. "Database Description Maximum Transmission Unit (MTU)
+        Specification for Non-IPv6 AFs", Section 2.7 contains a Database Description
+        packet change figure which include the "MS" bit. In this figure, the "MS" field will
+        be renamed to "L" field. 
+      </t>
+    </section>
+    
+    <section anchor="Acknowledgements" numbered="true" toc="default">
+      <name>Acknowledgements</name>
+      <t>TDB</t>
+    </section>
+    <!-- Possibly a 'Contributors' section ... -->
+
+   <section anchor="IANA" numbered="true" toc="default">
+      <name>IANA Considerations</name>
+      <t>IANA is requested to rename bit 0x01 in the "Database Description (DD) Packet Flags"
+      registry to "Leader (L-bit)" and to add a reference to this document.</t>
+    </section>
+
+    <section anchor="Security" numbered="true" toc="default">
+      <name>Security Considerations</name>
+      <t>
+        This document updates the terminology used in OSPF RFCs without any modification to the specifications of the protocol.
+        As such, the security characteristics of OSPF do not change.
+      </t>
+    </section>
+  </middle>
+  <!--  *****BACK MATTER ***** -->
+
+ <back>
+    <!-- References split into informative and normative -->
+
+   <!-- There are 2 ways to insert reference entries from the citation libraries:
+    1. define an ENTITY at the top, and use "ampersand character"RFC2629; here (as shown)
+    2. simply use a PI "less than character"?rfc include="reference.RFC.2119.xml"?> here
+       (for I-Ds: include="reference.I-D.narten-iana-considerations-rfc2434bis.xml")
+
+    Both are cited textually in the same manner: by using xref elements.
+    If you use the PI option, xml2rfc will, by default, try to find included files in the same
+    directory as the including file. You can also define the XML_LIBRARY environment variable
+    with a value containing a set of directories to search.  These can be either in the local
+    filing system or remote ones accessed by http (http://domain/dir/... ).-->
+
+   <references>
+      <name>References</name>
+      <references>
+        <name>Normative References</name>
+        <!--?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml"?-->
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.2328.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5340.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.4222.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.4811.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5243.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5614.xml"/>
+        <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5838.xml"/>
+      </references>
+
+    </references>
+
+    <!-- Change Log
+
+v00 2006-03-15  EBD   Initial version
+
+v01 2006-04-03  EBD   Moved PI location back to position 1 -
+                     v3.1 of XMLmind is better with them at this location.
+v02 2007-03-07  AH    removed extraneous nested_list attribute,
+                     other minor corrections
+v03 2007-03-09  EBD   Added comments on null IANA sections and fixed heading capitalization.
+                     Modified comments around figure to reflect non-implementation of
+                     figure indent control.  Put in reference using anchor="DOMINATION".
+                     Fixed up the date specification comments to reflect current truth.
+v04 2007-03-09 AH     Major changes: shortened discussion of PIs,
+                     added discussion of rfc include.
+v05 2007-03-10 EBD    Added preamble to C program example to tell about ABNF and alternative
+                     images. Removed meta-characters from comments (causes problems).
+
+v06 2010-04-01 TT     Changed ipr attribute values to latest ones. Changed date to
+                     year only, to be consistent with the comments. Updated the
+                     IANA guidelines reference from the I-D to the finished RFC.
+v07 2020-01-21 HL    Converted the template to use XML schema version 3.
+    -->
+ </back>
+</rfc>
