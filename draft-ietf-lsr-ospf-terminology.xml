@@ -6,7 +6,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-lsr-ospf-terminology-00"
+      docName="draft-ietf-lsr-ospf-terminology-02"
       ipr="trust200902"
       obsoletes=""
       updates="2328 5340 4222 4811 5243 5614 5838"
@@ -32,7 +32,7 @@
         full title is longer than 39 characters -->
 
    <title abbrev="OSPF Terminology">Update to OSPF Terminology</title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-00"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-02"/>
     <!-- add 'role="editor"' below for the editors if appropriate -->
 
    <!-- Another author who claims to be an editor -->
@@ -105,9 +105,11 @@
    <abstract>
       <t>
         This document updates some OSPF terminology to be in line with inclusive language used in the industry.
+        The IETF has designated National Institute of Standards and Technology (NIST) "Guidance for NIST Staff on Using
+        Inclusive Language in Documentary Standards" for its inclusive language guidelines.
       </t>
       <t>
-        This document updates RFC2328 and RFC5340.
+        This document updates RFC2328, RFC5340, RFC4222, RFC4811, RFC5243, RFC5614, and RFC5838.
       </t>
     </abstract>
   </front>
@@ -116,9 +118,13 @@
       <name>Introduction</name>
       <t>
         This document updates some OSPF terminology to be in line with inclusive language used in the industry.
+        The IETF has designated National Institute of Standards and Technology (NIST) "Guidance for NIST Staff on Using
+        Inclusive Language in Documentary Standards" <xref target="NISTIR8366"/> for its inclusive language guidelines.
       </t>
       <t>
-        This document updates <xref target="RFC2328"/> and <xref target="RFC5340"/>.
+        This document updates <xref target="RFC2328"/>, <xref target="RFC5340"/>, <xref target="RFC4222"/>,
+        <xref target="RFC4811"/>, <xref target="RFC5243"/>, <xref target="RFC5614"/>,
+        and <xref target="RFC5838"/>.
       </t>
 
     </section>
@@ -213,7 +219,7 @@
     
     <section anchor="Acknowledgements" numbered="true" toc="default">
       <name>Acknowledgements</name>
-      <t>TDB</t>
+      <t>Thanks to Dhruv Dhody for review and comments.</t>
     </section>
     <!-- Possibly a 'Contributors' section ... -->
 
@@ -259,6 +265,18 @@
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5243.xml"/>
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5614.xml"/>
         <xi:include href="https://www.rfc-editor.org/refs/bibxml/reference.RFC.5838.xml"/>
+      </references>
+      <references>
+        <name>Informative References</name>
+        <reference anchor="NISTIR8366" target="https://doi.org/10.6028/NIST.IR.8366">
+          <front>
+            <title>Guidance for NIST Staff on Using Inclusive Language in Documentary Standards,
+            National Institute of Standards and Technology (NIST) Interagency or Internal Report 8366</title>
+            <author surname="NIST"/>
+            <date year="2021" month="April"/>
+          </front>
+          <seriesInfo name="NISTIR" value="8366"/>
+        </reference>
       </references>
 
     </references>
