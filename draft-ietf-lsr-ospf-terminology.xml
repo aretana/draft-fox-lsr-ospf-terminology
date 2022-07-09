@@ -6,7 +6,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-lsr-ospf-terminology-02"
+      docName="draft-ietf-lsr-ospf-terminology-03"
       ipr="trust200902"
       obsoletes=""
       updates="2328 5340 4222 4811 5243 5614 5838"
@@ -32,7 +32,7 @@
         full title is longer than 39 characters -->
 
    <title abbrev="OSPF Terminology">Update to OSPF Terminology</title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-02"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-03"/>
     <!-- add 'role="editor"' below for the editors if appropriate -->
 
    <!-- Another author who claims to be an editor -->
@@ -166,7 +166,7 @@
       <t>
         This Best Current Practice (BCP) document describes "Prioritized Treatment of Specific OSPF Version 2 Packets and
         Congestion Avoidance" <xref target="RFC4222"/>. There is an example OSFPv2 packet sequence in Appendix C, (2),
-        that refers to the "slave" in a database exchange. This reference will be renamed to "follower". 
+        that refers to the "slave" in a database exchange. This reference will be renamed to "follower".
       </t>
     </section>
 
@@ -178,7 +178,7 @@
         Section 2.4 includes a Database Description packet figure and a description of the attendant encoding
         changes for Out-of-Band Resynchronization. In the figure and the description, all instances of MS when
         referring the Database Description packet bit are renamed to "L". There is also a reference to "Master" in
-        this section that is renamed to "Leader". 
+        this section that is renamed to "Leader".
       </t>
     </section>
 
@@ -191,21 +191,21 @@
         "Master" will be renamed to "Leader" and all instances of "Slave" will be rename to "Follower".
       </t>
     </section>
-    
+
     <section anchor="update5614" numbered="true" toc="default">
       <name>Update to RFC5614</name>
       <t>
         This Experimental document specifies the "Mobile Ad Hoc Network (MANET) Extension of OSPF
-        Using Connected Dominating Set (CDS) Flooding" <xref target="RFC5614"/>. 
+        Using Connected Dominating Set (CDS) Flooding" <xref target="RFC5614"/>.
         "Changes to the Neighbor State Machine", Section 7.2 contains modifications to the neighbor
         state machine updated from <xref target="RFC2328"/>. In this transition to "2-way" state, all
         instances of "Master" are renamed to "Leader" and all instances of "Slave" are renamed to
         "Follower". Addiitionally, instances of "MS" in reference to the Database Description packet
         bit are renamed to "L". Additionally, in "Receiving Database Description Packets, Section 7.5,
-        the parenthentical "master or slave" is replaced by "leader or follower". 
+        the parenthentical "master or slave" is replaced by "leader or follower".
       </t>
     </section>
-    
+
     <section anchor="update5838" numbered="true" toc="default">
       <name>Update to RFC5838</name>
       <t>
@@ -213,13 +213,33 @@
         <xref target="RFC5838"/>. "Database Description Maximum Transmission Unit (MTU)
         Specification for Non-IPv6 AFs", Section 2.7 contains a Database Description
         packet change figure which include the "MS" bit. In this figure, the "MS" field will
-        be renamed to "L" field. 
+        be renamed to "L" field.
       </t>
+            <t>
+        Additionally, in Section 2.4.,first paragraph, "Changes to the Hello Packet Processing",
+        the text is updated to remove the non-inclusive terms pertaining to
+        unreachability handling as follows:
+      </t>
+<figure title="RFC 5838, Section 2.4 - Updated First Paragraph">
+ <artwork>
+   When an OSPFv3 router does not support this specification and an
+   interface is configured with the Instance ID corresponding to a
+   IPv4 AF, packets could be routed toward this interface and
+   dropped. This could happen due to misconfiguration or a router
+   software downgrade. Packet reception and dropping on an
+   interface not configured with the packet AF, e.g., IPv4 is
+   possible because a router that doesn't support this specification
+   can still be included in the  SPF calculated path as long as it
+   establishes adjacencies using the Instance ID corresponding to
+   the IPv4 AF. Note that OSPPFv3 Router-LSAs and Network-LSAs are
+   AF-agnostic.
+             </artwork>
+           </figure>
     </section>
-    
+
     <section anchor="Acknowledgements" numbered="true" toc="default">
       <name>Acknowledgements</name>
-      <t>Thanks to Dhruv Dhody for review and comments.</t>
+      <t>Thanks to Dhruv Dhody and Adrian Farrel for review and comments.</t>
     </section>
     <!-- Possibly a 'Contributors' section ... -->
 
