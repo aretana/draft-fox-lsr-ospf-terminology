@@ -6,7 +6,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-lsr-ospf-terminology-03"
+      docName="draft-ietf-lsr-ospf-terminology-04"
       ipr="trust200902"
       obsoletes=""
       updates="2328 5340 4222 4811 5243 5614 5838"
@@ -32,7 +32,7 @@
         full title is longer than 39 characters -->
 
    <title abbrev="OSPF Terminology">Update to OSPF Terminology</title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-03"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-04"/>
     <!-- add 'role="editor"' below for the editors if appropriate -->
 
    <!-- Another author who claims to be an editor -->
@@ -52,7 +52,7 @@
    </author>
 
    <author initials="A" surname="Lindem" fullname="Acee Lindem">
-     <organization>Cisco Systems</organization>
+     <organization>LabN Consulting LLC</organization>
      <address>
        <postal>
          <street>301 Midenhall Way</street>
@@ -61,7 +61,7 @@
          <code>27513</code>
          <country>USA</country>
        </postal>
-      <email>acee@cisco.com</email>
+      <email>acee-ietf@gmail.com</email>
      </address>
    </author>
 
@@ -79,7 +79,7 @@
      </address>
    </author>
 
-    <date year="2022"/>
+    <date year="2023"/>
     <!-- If the month and year are both specified and are the current ones, xml2rfc will fill
         in the current day for you. If only the current year is specified, xml2rfc will fill
 	 in the current day and month for you. If the year is not the current one, it is
@@ -106,7 +106,9 @@
       <t>
         This document updates some OSPF terminology to be in line with inclusive language used in the industry.
         The IETF has designated National Institute of Standards and Technology (NIST) "Guidance for NIST Staff on Using
-        Inclusive Language in Documentary Standards" for its inclusive language guidelines.
+        Inclusive Language in Documentary Standards" for its inclusive language guidelines. It is intended that all
+        future OSPF documents use this revised terminology even when they reference the RFCs updated by this 
+        document.
       </t>
       <t>
         This document updates RFC2328, RFC5340, RFC4222, RFC4811, RFC5243, RFC5614, and RFC5838.
@@ -115,11 +117,13 @@
   </front>
   <middle>
     <section numbered="true" toc="default">
-      <name>Introduction</name>
+     <name>Introduction</name>
       <t>
         This document updates some OSPF terminology to be in line with inclusive language used in the industry.
         The IETF has designated National Institute of Standards and Technology (NIST) "Guidance for NIST Staff on Using
         Inclusive Language in Documentary Standards" <xref target="NISTIR8366"/> for its inclusive language guidelines.
+        It is intended that all future OSPF documents use this revised terminology even when they reference the RFCs
+        updated by this document.
       </t>
       <t>
         This document updates <xref target="RFC2328"/>, <xref target="RFC5340"/>, <xref target="RFC4222"/>,
@@ -226,20 +230,21 @@
    interface is configured with the Instance ID corresponding to a
    IPv4 AF, packets could be routed toward this interface and
    dropped. This could happen due to misconfiguration or a router
-   software downgrade. Packet reception and dropping on an
-   interface not configured with the packet AF, e.g., IPv4 is
-   possible because a router that doesn't support this specification
-   can still be included in the  SPF calculated path as long as it
-   establishes adjacencies using the Instance ID corresponding to
-   the IPv4 AF. Note that OSPPFv3 Router-LSAs and Network-LSAs are
+   software downgrade. Packet reception and dropping on an interface
+   not configured with the packet AF. For example, an IPv4 packet
+   could be received on an interface not supporting IPv4 since
+   a router that doesn't support this specification can still be
+   include the interface in the SPF calculated path as long as it
+   establishes adjacencies using the Instance ID corresponding
+   to the IPv4 AF. Note that OSPPFv3 Router-LSAs and Network-LSAs are
    AF-agnostic.
-             </artwork>
-           </figure>
+ </artwork>
+</figure>
     </section>
 
     <section anchor="Acknowledgements" numbered="true" toc="default">
       <name>Acknowledgements</name>
-      <t>Thanks to Dhruv Dhody and Adrian Farrel for review and comments.</t>
+      <t>Thanks to Dhruv Dhody, Adrian Farrel, and Barry Leiba for review and comments.</t>
     </section>
     <!-- Possibly a 'Contributors' section ... -->
 
@@ -301,27 +306,5 @@
 
     </references>
 
-    <!-- Change Log
-
-v00 2006-03-15  EBD   Initial version
-
-v01 2006-04-03  EBD   Moved PI location back to position 1 -
-                     v3.1 of XMLmind is better with them at this location.
-v02 2007-03-07  AH    removed extraneous nested_list attribute,
-                     other minor corrections
-v03 2007-03-09  EBD   Added comments on null IANA sections and fixed heading capitalization.
-                     Modified comments around figure to reflect non-implementation of
-                     figure indent control.  Put in reference using anchor="DOMINATION".
-                     Fixed up the date specification comments to reflect current truth.
-v04 2007-03-09 AH     Major changes: shortened discussion of PIs,
-                     added discussion of rfc include.
-v05 2007-03-10 EBD    Added preamble to C program example to tell about ABNF and alternative
-                     images. Removed meta-characters from comments (causes problems).
-
-v06 2010-04-01 TT     Changed ipr attribute values to latest ones. Changed date to
-                     year only, to be consistent with the comments. Updated the
-                     IANA guidelines reference from the I-D to the finished RFC.
-v07 2020-01-21 HL    Converted the template to use XML schema version 3.
-    -->
  </back>
 </rfc>
