@@ -6,7 +6,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-lsr-ospf-terminology-04"
+      docName="draft-ietf-lsr-ospf-terminology-05"
       ipr="trust200902"
       obsoletes=""
       updates="2328 5340 4222 4811 5243 5614 5838"
@@ -32,7 +32,7 @@
         full title is longer than 39 characters -->
 
    <title abbrev="OSPF Terminology">Update to OSPF Terminology</title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-04"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-05"/>
     <!-- add 'role="editor"' below for the editors if appropriate -->
 
    <!-- Another author who claims to be an editor -->
@@ -61,7 +61,7 @@
          <code>27513</code>
          <country>USA</country>
        </postal>
-      <email>acee-ietf@gmail.com</email>
+      <email>acee.ietf@gmail.com</email>
      </address>
    </author>
 
