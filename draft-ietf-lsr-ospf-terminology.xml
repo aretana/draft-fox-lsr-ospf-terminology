@@ -6,7 +6,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-lsr-ospf-terminology-06"
+      docName="draft-ietf-lsr-ospf-terminology-07"
       ipr="trust200902"
       obsoletes=""
       updates="2328 5340 4222 4811 5243 5614 5838"
@@ -32,7 +32,7 @@
         full title is longer than 39 characters -->
 
    <title abbrev="OSPF Terminology">Update to OSPF Terminology</title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-06"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-07"/>
     <!-- add 'role="editor"' below for the editors if appropriate -->
 
    <!-- Another author who claims to be an editor -->
@@ -136,7 +136,9 @@
     <section anchor="update" numbered="true" toc="default">
       <name>Update to RFC2328</name>
       <t>
-        The base OSPFv2 specification <xref target="RFC2328"/> defines the synchronization of databases as two routers froming a "master/slave relationship".  All instances of these terms are replaced by leader/follower, respectively.
+        The base OSPFv2 specification <xref target="RFC2328"/> defines the synchronization of
+        databases as two routers forming a "master/slave relationship".  All instances of these terms
+        are replaced by leader/follower, respectively.
       </t>
       <t>
 	The Master (MS) bit in the database description packet is renamed the Leader (L) bit.
@@ -181,7 +183,7 @@
         <xref target="RFC4811"/>.
         Section 2.4 includes a Database Description packet figure and a description of the attendant encoding
         changes for Out-of-Band Resynchronization. In the figure and the description, all instances of MS when
-        referring the Database Description packet bit are renamed to "L". There is also a reference to "Master" in
+        referring to the Database Description packet bit are renamed to "L". There is also a reference to "Master" in
         this section that is renamed to "Leader".
       </t>
     </section>
@@ -204,7 +206,7 @@
         "Changes to the Neighbor State Machine", Section 7.2 contains modifications to the neighbor
         state machine updated from <xref target="RFC2328"/>. In this transition to "2-way" state, all
         instances of "Master" are renamed to "Leader" and all instances of "Slave" are renamed to
-        "Follower". Addiitionally, instances of "MS" in reference to the Database Description packet
+        "Follower". Additionally, instances of "MS" in reference to the Database Description packet
         bit are renamed to "L". Additionally, in "Receiving Database Description Packets, Section 7.5,
         the parenthentical "master or slave" is replaced by "leader or follower".
       </t>
@@ -244,7 +246,7 @@
 
     <section anchor="Acknowledgements" numbered="true" toc="default">
       <name>Acknowledgements</name>
-      <t>Thanks to Dhruv Dhody, Adrian Farrel, and Barry Leiba for review and comments.</t>
+      <t>Thanks to Dhruv Dhody, Adrian Farrel, Barry Leiba, and Erik Kline for review and comments.</t>
     </section>
     <!-- Possibly a 'Contributors' section ... -->
 
