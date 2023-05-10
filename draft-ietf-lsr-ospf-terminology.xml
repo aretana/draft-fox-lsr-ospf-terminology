@@ -107,7 +107,7 @@
         This document updates some OSPF terminology to be in line with inclusive language used in the industry.
         The IETF has designated National Institute of Standards and Technology (NIST) "Guidance for NIST Staff on Using
         Inclusive Language in Documentary Standards" for its inclusive language guidelines. It is intended that all
-        future OSPF documents use this revised terminology even when they reference the RFCs updated by this 
+        future OSPF documents use this revised terminology even when they reference the RFCs updated by this
         document.
       </t>
       <t>
@@ -138,7 +138,7 @@
       <t>
         The base OSPFv2 specification <xref target="RFC2328"/> defines the synchronization of
         databases as two routers forming a "master/slave relationship".  All instances of these terms
-        are replaced by leader/follower, respectively.
+        are replaced by Leader/Follower, respectively.
       </t>
       <t>
 	The Master (MS) bit in the database description packet is renamed the Leader (L) bit.
@@ -146,7 +146,8 @@
       <t>
         The operation of OSPFv2 is not modified. The Leader/Follower terminology and Leader (L) Bit definition
         changes impact the following sections:  7.2 "The Synchronization of Databases", 10 "The Neighbor Data Structures",
-        10.1 "Neighbor states", 10.2 "Events causing neighbor state changes", 10.6 "Receiving Database Description Packets",
+        10.1 "Neighbor states", 10.2 "Events causing neighbor state changes", 10.3 "The Neighbor state machine",
+        10.6 "Receiving Database Description Packets",
         10.8 "Sending Database Description Packets", 10.10 "An Example", and A.3.3 "The Database Description packet".
       </t>
       </section>
@@ -156,7 +157,7 @@
       <t>
         The base OSPFv3 specification <xref target="RFC5340"/> defines the database description process
         between two routers as one being "designated to be the master and the other is the slave".  All instances of these
-        terms are replaced by leader/follower, respectively.
+        terms are replaced by Leader/Follower, respectively.
       </t>
       <t>
 	The Master/Slave (MS) bit in the database description packet is renamed the Leader (L) bit.
@@ -172,7 +173,7 @@
       <t>
         This Best Current Practice (BCP) document describes "Prioritized Treatment of Specific OSPF Version 2 Packets and
         Congestion Avoidance" <xref target="RFC4222"/>. There is an example OSFPv2 packet sequence in Appendix C, (2),
-        that refers to the "slave" in a database exchange. This reference will be renamed to "follower".
+        that refers to the "slave" in a database exchange. This reference will be renamed to "Follower".
       </t>
     </section>
 
@@ -181,7 +182,7 @@
       <t>
         This Experimental document specifies "OSPF Out-of-Band Link State Database (LSDB) Resynchronization"
         <xref target="RFC4811"/>.
-        Section 2.4 includes a Database Description packet figure and a description of the attendant encoding
+        Section 2.4 includes a Database Description packet (Figure 2) and a description of the attendant encoding
         changes for Out-of-Band Resynchronization. In the figure and the description, all instances of MS when
         referring to the Database Description packet bit are renamed to "L". There is also a reference to "Master" in
         this section that is renamed to "Leader".
@@ -208,7 +209,7 @@
         instances of "Master" are renamed to "Leader" and all instances of "Slave" are renamed to
         "Follower". Additionally, instances of "MS" in reference to the Database Description packet
         bit are renamed to "L". Additionally, in "Receiving Database Description Packets, Section 7.5,
-        the parenthentical "master or slave" is replaced by "leader or follower".
+        the parenthentical "master or slave" is replaced by "Leader or Follower".
       </t>
     </section>
 
@@ -226,7 +227,7 @@
         the text is updated to remove the non-inclusive terms pertaining to
         unreachability handling as follows:
       </t>
-<figure title="RFC 5838, Section 2.4 - Updated First Paragraph">
+
  <artwork>
    When an OSPFv3 router does not support this specification and an
    interface is configured with the Instance ID corresponding to a
@@ -241,7 +242,7 @@
    to the IPv4 AF. Note that OSPPFv3 Router-LSAs and Network-LSAs are
    AF-agnostic.
  </artwork>
-</figure>
+
     </section>
 
     <section anchor="Acknowledgements" numbered="true" toc="default">
