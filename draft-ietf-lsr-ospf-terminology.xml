@@ -6,7 +6,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-lsr-ospf-terminology-09"
+      docName="draft-ietf-lsr-ospf-terminology-10"
       ipr="trust200902"
       obsoletes=""
       updates="2328 5340 4222 4811 5243 5614 5838"
@@ -32,7 +32,7 @@
         full title is longer than 39 characters -->
 
    <title abbrev="OSPF Terminology">Update to OSPF Terminology</title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-09"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-lsr-ospf-terminology-10"/>
     <!-- add 'role="editor"' below for the editors if appropriate -->
 
    <!-- Another author who claims to be an editor -->
@@ -223,7 +223,7 @@
         be renamed to "L" field.
       </t>
             <t>
-        Additionally, in Section 2.4.,first paragraph, "Changes to the Hello Packet Processing",
+        Additionally, in Section 2.4., first paragraph, "Changes to the Hello Packet Processing",
         the text is updated to remove the non-inclusive terms pertaining to
         unreachability handling as follows:
       </t>
@@ -239,7 +239,7 @@
    a router that doesn't support this specification can still
    include the interface in an SPF-calculated path as long as it
    establishes adjacencies using the Instance ID corresponding
-   to the IPv4 AF. Note that OSPPFv3 Router-LSAs and Network-LSAs are
+   to the IPv4 AF. Note that OSPFv3 Router-LSAs and Network-LSAs are
    AF-agnostic.
  </artwork>
 
